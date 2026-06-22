@@ -8,19 +8,23 @@ This repository provides a complete pipeline to train a U-Net model on medical i
 ## Quick Start
 1. **Clone the repository:**
 ```
+bash
 git clone [https://github.com/cheez143/brain-tumor-segmentation.git](https://github.com/cheez143/brain-tumor-segmentation.git)
 cd brain-tumor-segmentation
 ```
 
 2. **Set up virtual environment**
+
 *Windows:*
 ```
+bash
 python -m venv venv
 .\venv\Scripts\activate
 ```
 
 *macOS/Linux:*
 ```
+bash
 python3 -m venv venv
 source venv/bin/activate
 ```
