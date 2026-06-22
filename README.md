@@ -30,7 +30,7 @@ source venv/bin/activate
    `pip install -r requirements.txt`
 
 4. **Prepare Data:**
-   See [Data Documentation & Attributions](data/README.md) for instructions on where to download and how to organize the dataset.
+   See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
 
 5. **Train:**
    `python train.py --epochs 50 --batch_size 16`
