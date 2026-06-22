@@ -1,1 +1,15 @@
 
+# Data handling
+pandas
+numpy
+pillow
+opencv-python
+
+# Deep Learning Framework
+torch
+torchvision
+
+# Utility/Training
+matplotlib
+tqdm
+scikit-learn
