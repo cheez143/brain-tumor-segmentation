@@ -8,7 +8,7 @@ This repository provides a complete pipeline to train a U-Net model on medical i
 ## Quick Start
 1. **Clone the repository:**
 ```
-git clone [https://github.com/cheez143/brain-tumor-segmentation.git](https://github.com/cheez143/brain-tumor-segmentation.git)
+git clone https://github.com/cheez143/brain-tumor-segmentation.git
 cd brain-tumor-segmentation
 ```
 
