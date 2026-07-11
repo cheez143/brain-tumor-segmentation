@@ -32,7 +32,13 @@ source ./venv/bin/activate
 5. **Prepare Data:**
    See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
 
-6. **Train:**
+6. **Jupyter Notebook**
+We provide an interactive Jupyter Notebook for data exploration and visualization.
+- `exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
+- **Usage**: Ensure you have installed the requirements, then run:
+  `jupyter notebook notebooks/exploration.ipynb`
+
+7. **Train:**
 `python train.py --epochs 50 --batch_size 16`
 
 ## Contributing
