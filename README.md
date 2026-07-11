@@ -33,7 +33,7 @@ source ./venv/bin/activate
    See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
 
 6. **Jupyter Notebook**
-7. 
+
 We provide interactive Jupyter Notebooks to guide you through the project:
 - `notebooks/exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
 - `notebooks/classification.ipynb`: An introduction to the data using a simple CNN for binary tumor classification (detecting if a tumor exists).
