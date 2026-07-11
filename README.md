@@ -27,7 +27,9 @@ source ./venv/bin/activate
 ```
 
 3. **Install dependencies:**
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 5. **Prepare Data:**
    See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
@@ -44,7 +46,9 @@ We provide interactive Jupyter Notebooks to guide you through the project:
   ```
 
 7. **Train:**
-`python train.py --epochs 50 --batch_size 16`
+```
+python train.py --epochs 50 --batch_size 16
+```
 
 ## Contributing
 1. **Branching:** Please create a new branch for each new feature (e.g., `git checkout -b feature/model-enhancement`).
