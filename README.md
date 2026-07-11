@@ -35,7 +35,7 @@ source ./venv/bin/activate
 6. **Jupyter Notebook**
 We provide an interactive Jupyter Notebook for data exploration and visualization.
 - `exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
-- **Usage**: Ensure you have installed the requirements, then run:
+- Ensure you have installed the requirements, then run:
   `jupyter notebook notebooks/exploration.ipynb`
 
 7. **Train:**
