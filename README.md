@@ -27,7 +27,7 @@ source ./venv/bin/activate
 ```
 
 3. **Install dependencies:**
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
 
 5. **Prepare Data:**
    See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
@@ -36,7 +36,7 @@ source ./venv/bin/activate
 We provide an interactive Jupyter Notebook for data exploration and visualization.
 - `exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
 - Ensure you have installed the requirements, then run:
-  `jupyter notebook notebooks/exploration.ipynb`
+  ```jupyter notebook notebooks/exploration.ipynb```
 
 7. **Train:**
 `python train.py --epochs 50 --batch_size 16`
