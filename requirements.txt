@@ -1,4 +1,3 @@
-
 # Data handling
 pandas
 numpy
@@ -13,3 +12,7 @@ torchvision
 matplotlib
 tqdm
 scikit-learn
+
+# Jupyter Notebook
+jupyter
+ipykernel
