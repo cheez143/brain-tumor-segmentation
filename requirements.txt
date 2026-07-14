@@ -8,6 +8,7 @@ seaborn
 # Deep Learning Framework
 torch
 torchvision
+keras
 
 # Utility/Training
 matplotlib
