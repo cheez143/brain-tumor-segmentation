@@ -5,6 +5,14 @@ A deep learning project implementing a U-Net architecture for pixel-level semant
 ## Project Overview
 This repository provides a complete pipeline to train a U-Net model on medical imaging data. It is designed to be cross-platform, ensuring consistent performance across Windows, macOS, and Linux by using hardware-agnostic code and virtual environments.
 
+## Requirements
+
+- Python 3.11.x
+- pip >= 23.x
+- Recommended: NVIDIA GPU with CUDA support (optional)
+
+The project is tested with Python 3.11.9.
+
 ## Quick Start
 1. **Clone the repository:**
 ```
@@ -14,19 +22,36 @@ cd brain-tumor-segmentation
 
 2. **Set up virtual environment**
 
+Make sure Python 3.11 is installed.
+
+Check your version:
+
 *Windows:*
 ```
-python -m venv venv
+py --version
+```
+
+*macOS/Linux:*
+```
+python3.11 --version
+```
+
+Create and activate the virtual environment:
+
+*Windows:*
+```
+py -3.11 -m venv venv
 .\venv\Scripts\activate
 ```
 
 *macOS/Linux:*
 ```
-python3 -m venv venv
+python3.11 -m venv venv
 source ./venv/bin/activate
 ```
 
 3. **Install dependencies:**
+
 ```
 pip install -r requirements.txt
 ```
