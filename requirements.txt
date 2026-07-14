@@ -8,6 +8,7 @@ seaborn
 # Deep Learning Framework
 torch
 torchvision
+tensorflow
 keras
 
 # Utility/Training
