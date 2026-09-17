@@ -15,9 +15,11 @@ brain-tumor-segmentation/
 │   ├── data.py             # Automated data loading and preprocessing pipeline
 │   ├── model.py            # Customized U-Net architecture definition
 │   └── metrics.py          # Custom Dice coefficient and BCE-Dice loss functions
+├── notebooks/                   # Jupyter Notebooks
+│   ├── exploration.ipynb        # Data inspection & visual debugging
+│   ├── classification.ipynb     # Simple CNN for binary tumor classification
 │
-├── train.py                # Fully configurable CLI training script
-└── exploration.ipynb       # Jupyter Notebook for data inspection & visual debugging
+└── train.py                # Fully configurable CLI training script
 ```
 
 ## Architectural Highlights
