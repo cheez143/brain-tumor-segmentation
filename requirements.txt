@@ -9,7 +9,6 @@ keras>=3.0.0
 # Utility/Training
 matplotlib
 tqdm
-scikit-learn
 
 # Jupyter Notebook
 jupyter
