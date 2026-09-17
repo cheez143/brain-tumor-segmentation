@@ -1,6 +1,6 @@
 import argparse
 import keras
-from tensorflow as tf
+import tensorflow as tf
 from src.model import build_full_unet
 from src.metrics import bce_dice_loss, dice_coefficient
 from src.data import load_and_preprocess_data 
