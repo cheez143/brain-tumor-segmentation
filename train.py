@@ -42,7 +42,7 @@ def main():
 
     train_dataset = tf.data.Dataset.from_tensor_slices((X_train, Y_train))
     train_dataset = train_dataset.shuffle(buffer_size=1000, seed=args.seed)
-    train_dataset = train_dataset.batch(args.batch_size).prefetch(AUTOTUNE)
+    train_dataset = train_dataset.batch(args.batch_size).repeat().prefetch(AUTOTUNE)
 
     print("Starting training via CLI...")
     model.fit(
