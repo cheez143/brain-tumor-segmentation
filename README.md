@@ -8,19 +8,18 @@ A modularized deep learning pipeline for automated brain tumor segmentation from
 brain-tumor-segmentation/
 │
 ├── data/
-│   └── kaggle_3m/          # Dataset directory (MRI images and masks)
+│   └── kaggle_3m/                     # Dataset directory (MRI images and masks)
 ├── models/
-│   └── best_unet_brain_tumor.keras  # Automatically saved best weights
-├── src/                    # Modular core package
-│   ├── __init__.py         # Package initialization
-│   ├── data.py             # Automated data loading and preprocessing pipeline
-│   ├── model.py            # Customized U-Net architecture definition
-│   └── metrics.py          # Custom Dice coefficient and BCE-Dice loss functions
-├── notebooks/                   # Jupyter Notebooks
-│   ├── exploration.ipynb        # Data inspection & visual debugging
-│   ├── classification.ipynb     # Simple CNN for binary tumor classification
-│
-└── train.py                # Fully configurable CLI training script
+│   └── best_unet_brain_tumor.keras    # Automatically saved best weights
+├── src/                             
+│   ├── __init__.py                    # Package initialization
+│   ├── data.py                        # Automated data loading and preprocessing pipeline
+│   ├── model.py                       # Customized U-Net architecture definition
+│   └── metrics.py                     # Custom Dice coefficient and BCE-Dice loss functions
+├── notebooks/                       
+│   ├── exploration.ipynb              # Data inspection & visual debugging
+│   ├── classification.ipynb           # Simple CNN for binary tumor classification
+└── train.py                           # Fully configurable CLI training script
 ```
 
 ## Architectural Highlights
