@@ -9,7 +9,8 @@ brain-tumor-segmentation/
 │
 ├── data/
 │   └── kaggle_3m/          # Dataset directory (MRI images and masks)
-│
+├── models/
+│   └── best_unet_brain_tumor.keras  # Automatically saved best weights
 ├── src/                    # Modular core package
 │   ├── __init__.py         # Package initialization
 │   ├── data.py             # Automated data loading and preprocessing pipeline
