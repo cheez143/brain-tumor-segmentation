@@ -84,7 +84,8 @@ pip install -r requirements.txt
 ```
 
 5. **Prepare Data**
-   See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
+
+See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
 
 6. **Training via Command-Line Interface (CLI)**
 
