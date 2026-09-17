@@ -1,15 +1,10 @@
 # Data handling
-pandas
 numpy
-pillow
 opencv-python
-seaborn
 
 # Deep Learning Framework
-torch
-torchvision
-tensorflow
-keras
+tensorflow>=2.10.0
+keras>=3.0.0
 
 # Utility/Training
 matplotlib
