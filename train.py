@@ -11,7 +11,7 @@ def parse_arguments():
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--seed', type=int, default=666)
-    parser.add_argument('--data_dir', type=str, default="../data/kaggle_3m/")
+    parser.add_argument('--data_dir', type=str, default="data/kaggle_3m/")
     return parser.parse_args()
 
 def main():
