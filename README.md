@@ -104,7 +104,7 @@ python train.py --epochs 40 --batch_size 32 --lr 0.0005 --seed 100
 | `--batch_size` | Batch size for training generator | `16` |
 | `--lr` | Initial learning rate for the Adam optimizer | `0.0001` |
 | `--seed` | Random seed for data generator synchronization | `666` |
-| `--data_dir` | Path to the dataset folder | `../data/kaggle_3m/` |
+| `--data_dir` | Path to the dataset folder | `data/kaggle_3m/` |
 
 7. **Jupyter Notebook**
 
