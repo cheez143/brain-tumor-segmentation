@@ -1,6 +1,6 @@
 import argparse
 import keras
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow as tf
 from src.model import build_full_unet
 from src.metrics import bce_dice_loss, dice_coefficient
 from src.data import load_and_preprocess_data 
@@ -35,20 +35,21 @@ def main():
         keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=1e-6, verbose=1)
     ]
 
-    image_datagen = ImageDataGenerator(rotation_range=15, width_shift_range=0.1, height_shift_range=0.1, horizontal_flip=True, fill_mode='nearest')
-    mask_datagen = ImageDataGenerator(rotation_range=15, width_shift_range=0.1, height_shift_range=0.1, horizontal_flip=True, fill_mode='nearest')
+    AUTOTUNE = tf.data.AUTOTUNE
 
-    train_generator = zip(
-        image_datagen.flow(X_train, batch_size=args.batch_size, seed=args.seed),
-        mask_datagen.flow(Y_train, batch_size=args.batch_size, seed=args.seed)
-    )
+    val_dataset = tf.data.Dataset.from_tensor_slices((X_val, Y_val))
+    val_dataset = val_dataset.batch(args.batch_size).prefetch(AUTOTUNE)
+
+    train_dataset = tf.data.Dataset.from_tensor_slices((X_train, Y_train))
+    train_dataset = train_dataset.shuffle(buffer_size=1000, seed=args.seed)
+    train_dataset = train_dataset.batch(args.batch_size).prefetch(AUTOTUNE)
 
     print("Starting training via CLI...")
     model.fit(
-        train_generator,
+        train_dataset,
         steps_per_epoch=len(X_train) // args.batch_size,
         epochs=args.epochs,
-        validation_data=(X_val, Y_val),
+        validation_data=val_dataset,
         callbacks=callbacks,
         verbose=2
     )
