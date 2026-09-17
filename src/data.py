@@ -2,7 +2,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-def load_and_preprocess_data(data_dir="../data/kaggle_3m/", img_size=128):
+def load_and_preprocess_data(data_dir="data/kaggle_3m/", img_size=128):
     BASE_DIR = Path(data_dir)
 
     print("Searching for images and masks...")
