@@ -96,17 +96,15 @@ You can train the model directly from your terminal with customizable hyperparam
 python train.py --epochs 40 --batch_size 32 --lr 0.0005 --seed 100
 ```
 
-Available CLI Flags:
+*Available CLI Flags*
 
-    --epochs: Number of training epochs (default: 50)
-
-    --batch_size: Batch size for training generator (default: 16)
-
-    --lr: Initial learning rate for the Adam optimizer (default: 0.0001)
-
-    --seed: Random seed for data generator synchronization (default: 666)
-
-    --data_dir: Path to the dataset folder (default: ../data/kaggle_3m/)
+| Flag | Description | Default Value |
+| :--- | :--- | :--- |
+| `--epochs` | Number of training epochs | `50` |
+| `--batch_size` | Batch size for training generator | `16` |
+| `--lr` | Initial learning rate for the Adam optimizer | `0.0001` |
+| `--seed` | Random seed for data generator synchronization | `666` |
+| `--data_dir` | Path to the dataset folder | `../data/kaggle_3m/` |
 
 7. **Jupyter Notebook**
 
