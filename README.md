@@ -1,9 +1,34 @@
 # Brain Tumor Segmentation (U-Net)
 
-A deep learning project implementing a U-Net architecture for pixel-level semantic segmentation of brain tumor (low-grade glioma) from MRI scans.
+A production-ready, modularized deep learning pipeline for automated brain tumor segmentation from MRI scans using a custom U-Net architecture. This project has evolved from a single experimental notebook into a structured, scalable MLOps repository featuring a command-line interface (CLI) for flexible training and a dedicated sandbox for data exploration.
 
-## Project Overview
-This repository provides a complete pipeline to train a U-Net model on medical imaging data. It is designed to be cross-platform, ensuring consistent performance across Windows, macOS, and Linux by using hardware-agnostic code and virtual environments.
+## Project Structure
+
+```text
+brain-tumor-segmentation/
+│
+├── data/
+│   └── kaggle_3m/          # Dataset directory (MRI images and masks)
+│
+├── src/                    # Modular core package
+│   ├── __init__.py         # Package initialization
+│   ├── data.py             # Automated data loading and preprocessing pipeline
+│   ├── model.py            # Customized U-Net architecture definition
+│   └── metrics.py          # Custom Dice coefficient and BCE-Dice loss functions
+│
+├── train.py                # Fully configurable CLI training script
+└── exploration.ipynb       # Jupyter Notebook for data inspection & visual debugging
+```
+
+## Architectural Highlights
+
+1. **Custom U-Net Design:** Engineered with a lightweight, optimized footprint starting with 32 filters, scaling down to a 256-filter bottleneck, and using padding='same' with UpSampling2D to cleanly preserve spatial dimensions without complex feature map cropping.
+
+2. **Robust Loss Function:** Combines Binary Cross-Entropy and Soft Dice Loss (bce_dice_loss) to effectively combat class imbalance between background tissue and tumor regions.
+
+3. **Advanced Callbacks:** Integrated EarlyStopping (patience 5) and ReduceLROnPlateau (factor 0.5, patience 2) to ensure stable generalization and prevent overfitting.
+
+4. **Synchronized Data Augmentation:** Utilizes ImageDataGenerator with a fixed seed (666) to ensure parallel, synchronized spatial transformations across input MRIs and ground-truth masks.
 
 ## Requirements
 
@@ -56,15 +81,33 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. **Prepare Data:**
+5. **Prepare Data**
    See [Data Documentation & Attribution](data/README.md) for instructions on where to download and how to organize the dataset.
 
-6. **Jupyter Notebook**
+6. **Training via Command-Line Interface (CLI)**
+
+You can train the model directly from your terminal with customizable hyperparameters without modifying any source code. Example:
+```
+python train.py --epochs 40 --batch_size 32 --lr 0.0005 --seed 100
+```
+
+Available CLI Flags:
+
+    --epochs: Number of training epochs (default: 50)
+
+    --batch_size: Batch size for training generator (default: 16)
+
+    --lr: Initial learning rate for the Adam optimizer (default: 0.0001)
+
+    --seed: Random seed for data generator synchronization (default: 666)
+
+    --data_dir: Path to the dataset folder (default: ../data/kaggle_3m/)
+
+8. **Jupyter Notebook**
 
 We provide interactive Jupyter Notebooks to guide you through the project:
 - `notebooks/exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
 - `notebooks/classification.ipynb`: An introduction to the data using a simple CNN for binary tumor classification (detecting if a tumor exists).
-- `notebooks/segmentation.ipynb` (Coming soon): The full U-Net implementation for pixel-level tumor segmentation.
 - Ensure you have installed the requirements, then run:
   ```
   jupyter notebook notebooks/
