@@ -89,7 +89,9 @@ See [Data Documentation & Attribution](data/README.md) for instructions on where
 
 6. **Training via Command-Line Interface (CLI)**
 
-You can train the model directly from your terminal with customizable hyperparameters without modifying any source code. Example:
+You can train the model directly from your terminal with customizable hyperparameters without modifying any source code. 
+
+*Example:*
 ```
 python train.py --epochs 40 --batch_size 32 --lr 0.0005 --seed 100
 ```
