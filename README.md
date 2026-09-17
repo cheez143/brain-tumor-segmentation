@@ -1,6 +1,6 @@
 # Brain Tumor Segmentation (U-Net)
 
-A production-ready, modularized deep learning pipeline for automated brain tumor segmentation from MRI scans using a custom U-Net architecture. This project has evolved from a single experimental notebook into a structured, scalable MLOps repository featuring a command-line interface (CLI) for flexible training and a dedicated sandbox for data exploration.
+A modularized deep learning pipeline for automated brain tumor segmentation from MRI scans using a custom U-Net architecture. This project has evolved from a single experimental notebook into a structured repository featuring a command-line interface (CLI) for flexible training and a dedicated sandbox for data exploration.
 
 ## Project Structure
 
