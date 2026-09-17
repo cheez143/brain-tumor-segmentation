@@ -108,7 +108,7 @@ Available CLI Flags:
 
     --data_dir: Path to the dataset folder (default: ../data/kaggle_3m/)
 
-8. **Jupyter Notebook**
+7. **Jupyter Notebook**
 
 We provide interactive Jupyter Notebooks to guide you through the project:
 - `notebooks/exploration.ipynb`: Use this to inspect the dataset and understand the metadata distribution.
@@ -117,12 +117,7 @@ We provide interactive Jupyter Notebooks to guide you through the project:
   ```
   jupyter notebook notebooks/
   ```
-
-7. **Train:**
-```
-python train.py --epochs 50 --batch_size 16
-```
-
+  
 ## Contributing
 1. **Branching:** Please create a new branch for each new feature (e.g., `git checkout -b feature/model-enhancement`).
 2. **Data:** Do not commit data to the repository. Please keep the `data/` directory local and refer to the [data/README.md](data/README.md) for setup instructions.
