@@ -41,25 +41,16 @@ def main():
         )
     ]
 
-    AUTOTUNE = tf.data.AUTOTUNE
-
-    val_dataset = tf.data.Dataset.from_tensor_slices((X_val, Y_val))
-    val_dataset = val_dataset.batch(args.batch_size).prefetch(AUTOTUNE)
-
-    train_dataset = tf.data.Dataset.from_tensor_slices((X_train, Y_train))
-    train_dataset = train_dataset.shuffle(buffer_size=1000, seed=args.seed)
-    train_dataset = train_dataset.batch(args.batch_size).repeat().prefetch(AUTOTUNE)
-
     print("Starting training via CLI...")
     model.fit(
-        train_dataset,
-        steps_per_epoch=len(X_train) // args.batch_size,
+        X, Y,
+        batch_size=args.batch_size,
         epochs=args.epochs,
-        validation_data=val_dataset,
+        validation_split=0.2,
         callbacks=callbacks,
         verbose=2
     )
-    print("Training complete!")
+    print("Training complete! Best model saved to models/best_unet_brain_tumor.keras")
 
 if __name__ == '__main__':
     main()
