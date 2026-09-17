@@ -115,11 +115,5 @@ We provide interactive Jupyter Notebooks to guide you through the project:
   ```
   jupyter notebook notebooks/
   ```
-  
-## Contributing
-1. **Branching:** Please create a new branch for each new feature (e.g., `git checkout -b feature/model-enhancement`).
-2. **Data:** Do not commit data to the repository. Please keep the `data/` directory local and refer to the [data/README.md](data/README.md) for setup instructions.
-3. **Pull Requests:** Open a Pull Request once your feature is complete and tested locally.
-
 ## License
 This code is released under the **[MIT License](LICENSE)**.
